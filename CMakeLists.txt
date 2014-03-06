@@ -13,3 +13,6 @@ find_package(PNG REQUIRED)
 add_executable(9slice 9slice.c)
 include_directories(${PNG_INCLUDE_DIRS})
 target_link_libraries(9slice ${PNG_LIBRARY})
+
+# Installation
+install (TARGETS 9slice DESTINATION bin)
