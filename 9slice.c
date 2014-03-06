@@ -270,7 +270,7 @@ int main(int argc, char **argv)
   struct nine_slice_png input = read_png(args.input);
   struct nine_slice_png output = obtain_write_png(args.output, input.width + 2, input.height + 2);
 
-  // insets and paddings are non-negative hence passing '-' is treated as options!
+  // insets and paddings are non-negative since passing '-' is treated as options!
   if (args.inset_top >= input.height ||
       args.inset_left >= input.width ||
       args.inset_bottom >= input.height ||
